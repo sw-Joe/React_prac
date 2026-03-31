@@ -13,3 +13,16 @@ export default function UserProfileProps ({name, age, isAdmin}: UserProfileProps
         </>
     )
 }
+
+
+// export default function UserProfileProps (props: UserProfileProps) {
+//     const {name, age, isAdmin} = props;
+
+//     return (
+//         <>
+//             <p>이름: {name}</p>
+//             <p>나이: {age}</p>
+//             <p>{isAdmin? "관리자 계정" : "일반 사용자"}</p>
+//         </>
+//     )
+// }
