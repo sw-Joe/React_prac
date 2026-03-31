@@ -1,11 +1,9 @@
-import Button from "./components/Button";
+import Count from "./components/Count";
 
 export default function App() {
     return (
         <>
-            <Button name={'Home'} />
-            <Button name={'Store'} />
-            <Button name={'Contact'} />
+            <Count />
         </>
     )
 }
