@@ -1,0 +1,94 @@
+.App {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Header h1 {
+  color: #1f8bff;
+}
+
+.TodoEditor .editor_wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.TodoEditor input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.TodoEditor button {
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f8bff;
+  color: white;
+  cursor: pointer;
+}
+
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.TodoList .searchbar {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.TodoList .searchbar:focus {
+  outline: none;
+  border-bottom: 1px solid #1f8bff;
+}
+
+.TodoList .list_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.TodoList .empty_message {
+  color: gray;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.TodoItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.TodoItem .checkbox_col {
+  width: 200px;
+}
+
+.TodoItem .title_col {
+  flex: 1;
+}
+
+.TodoItem .title_col.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.TodoItem .date_col {
+  font-size: 14px;
+  color: gray;
+}
+
+.TodoItem .btn_col button {
+  border: none;
+  border-radius: px;
+  padding: 5px;
+  color: gray;
+  cursor: pointer;
+}
