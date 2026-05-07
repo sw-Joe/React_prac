@@ -18,7 +18,7 @@ export default function TodoList({ todo, onUpdate, onDelete }: TodoListProps) {
       <h4>TodoList</h4>
       <input className="searchbar" 
         value={search}
-        onClick={(e) => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value)}
         placeholder="검색어를 입력하세요" />
 
       <div className="list_wrapper">

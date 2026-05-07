@@ -46,13 +46,23 @@ export default function App() {
     
       setTodo((todo) => [newItem, ...todo]);
   }
+  const onUpdate = (targetID: string) => {
+    setTodo((todo) => 
+      todo.map((item) => 
+        item.id === targetID ? { ...item, isDone: !item.isDone } : item,
+      ),
+    );
+  };
+  const onDelete = (targetId: string) => {
+    setTodo((todo) => todo.filter((item) => item.id !== targetId));
+  };
 
   return (
     <>
       <div className='App'>
         <Header/>
         <TodoEditor onCreate={onCreate}/>
-        <TodoList todo={todo}/>
+        <TodoList todo={todo} onUpdate={onUpdate} onDelete={onDelete}/>
       </div>
     </>
   )
