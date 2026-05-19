@@ -1,9 +1,9 @@
-import Login from "./components/Login";
+import Todo from "./components/Todo";
 
 export default function App() {
-  return (
-    <>
-      <Login />
-    </>
-  );
+    return (
+        <>
+            <Todo />
+        </>
+    );
 }
