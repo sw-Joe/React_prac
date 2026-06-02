@@ -1,16 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "./html/Button";
 import Checkbox from "./html/Checkbox";
 import SvgClose from "./svg/SvgClose";
 import SvgPencil from "./svg/SvgPencil";
 
 /* 할 일 목록이 있을 때 */
-export default function TodoListItem({todo, toggleTodo, deleteTodo, modifyTodo}: {
+export default React.memo(function TodoListItem({todo, toggleTodo, deleteTodo, modifyTodo}: {
     todo:Todo;
     toggleTodo: (id: number) => void;
     deleteTodo: (id: number) => void;
     modifyTodo: (id: number, text: string) => void;
 }) {
+    console.debug("TodoListItem");    // 랜더링 확인용
     const [isModify, setIsModify] = useState(false);    // 수정 모드 여부를 판단하는 상태
     const [modifyText, SetModifyText] = useState("");    // 수정할 내용을 담는 상태
 
@@ -50,4 +51,4 @@ export default function TodoListItem({todo, toggleTodo, deleteTodo, modifyTodo}:
             </li>
         </>
     );
-}
+});

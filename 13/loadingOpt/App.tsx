@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useDeferredValue, useState } from "react";
+import { lazy, Suspense, useCallback, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 // import A from "./components/A";
 // const A = lazy(() => import("./components/A"));    // 컴포넌트가 필요할 때 다운로드
@@ -23,8 +23,6 @@ export default function App() {
     console.debug("App reader");
     const [count, setCount] = useState(0);
     const [isShow, setIsShow] = useState(false);
-    const [query, setQuery] = useState("");
-    const defferedValue = useDeferredValue(query);
 
     const increment = useCallback(() => {
         setCount((count) => count + 1);
@@ -40,10 +38,6 @@ export default function App() {
                     {isShow && <Suspense fallback={<h1>'A' Loading...</h1>}><A increment={increment}/></Suspense>}
                 </Suspense>
             </ErrorBoundary>
-            <div>
-                <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
-                <SlowList query={defferedValue} />
-            </div>
         </>
     );
 }
